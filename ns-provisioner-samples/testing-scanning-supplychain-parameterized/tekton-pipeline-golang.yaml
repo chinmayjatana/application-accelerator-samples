@@ -42,7 +42,7 @@ spec:
               type: RuntimeDefault
         steps:
           - name: test
-            image: golang
+            image: projects.registry.vmware.com/tanzu_adv_eng/golang@sha256:1b46d1164aceec47750cc0c3a6f8c44ee8050a0745c07affcef73518544a2b1f
             script: |-
               cd `mktemp -d`
               wget -qO- $(params.source-url) | tar xvz -m
