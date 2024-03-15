@@ -1,16 +1,13 @@
 
 plugins {
-    id("org.springframework.boot") version "2.7.18"
-    id("io.spring.dependency-management") version "1.0.15.RELEASE"
+    id("org.springframework.boot") version "3.2.3"
+    id("io.spring.dependency-management") version "1.1.4"
     id("java")
 }
 
 group = "com.vmware.tap.accelerators"
 version = "0.0.1-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_11
-
-extra["snakeyaml.version"] = "1.33"
-extra["spring-security.version"] = "5.8.10"
+java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
     mavenCentral()
@@ -21,6 +18,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+    implementation("org.webjars:webjars-locator-core")
+    implementation("org.webjars:bootstrap:5.2.0")
 
     // Test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
