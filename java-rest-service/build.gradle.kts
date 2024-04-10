@@ -1,6 +1,6 @@
 
 plugins {
-    id("org.springframework.boot") version "3.2.3"
+    id("org.springframework.boot") version "3.2.4"
     id("io.spring.dependency-management") version "1.1.4"
     id("java")
 }
@@ -28,6 +28,9 @@ dependencies {
     // Infrastructure
     implementation("org.flywaydb:flyway-core")
     implementation("org.liquibase:liquibase-core")
+
+    // Observability support
+    runtimeOnly("io.micrometer:micrometer-registry-prometheus")
 
     // Test
     testImplementation ("org.springframework.boot:spring-boot-starter-test")
